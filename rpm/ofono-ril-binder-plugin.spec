@@ -1,8 +1,7 @@
 Name: ofono-ril-binder-plugin
-Version: 1.0.13
+Version: 1.0.16
 Release: 1
 Summary: Ofono RIL binder transport plugin
-Group: Development/Libraries
 License: BSD
 URL: https://github.com/mer-hybris/ofono-ril-binder-plugin
 Source: %{name}-%{version}.tar.bz2
@@ -27,11 +26,11 @@ This package contains ofono plugin which implements binder transport for RIL
 %setup -q -n %{name}-%{version}
 
 %build
-make %{_smp_mflags} KEEP_SYMBOLS=1 release pkgconfig
+make %{_smp_mflags} LIBDIR=%{_libdir} KEEP_SYMBOLS=1 release pkgconfig
 
 %install
 rm -rf %{buildroot}
-make install-dev DESTDIR=%{buildroot}
+make LIBDIR=%{_libdir} DESTDIR=%{buildroot} install-dev
 
 mkdir -p %{buildroot}/%{plugin_dir}
 %preun
@@ -45,7 +44,6 @@ mkdir -p %{buildroot}/%{plugin_dir}
 
 %package -n libgrilio-binder
 Summary: Binder based transport for libgrilio
-Group: Development/Libraries
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 Requires: ofono >= %{ofono_version}
