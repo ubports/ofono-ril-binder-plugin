@@ -1,3 +1,9 @@
+ofono-ril-binder-plugin (1.0.16+ubports2) xenial; urgency=medium
+
+  * Merge testing branch 'jb50597'
+
+ -- Alfred Neumayer <dev.beidl@gmail.com>  Sat, 28 Nov 2020 00:05:50 +0100
+
 ofono-ril-binder-plugin (1.0.16+ubports1) xenial; urgency=medium
 
   * Merge from upstream
