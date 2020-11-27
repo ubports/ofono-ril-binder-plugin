@@ -1,3 +1,9 @@
+ofono-ril-binder-plugin (1.0.16+ubports1) xenial; urgency=medium
+
+  * Merge from upstream
+
+-- Alfred Neumayer <dev.beidl@gmail.com>  Fri, 27 Nov 2020 23:54:34 +0100
+
 ofono-ril-binder-plugin (1.0.13+ubports1) xenial; urgency=medium
 
   * Import into UBPorts
